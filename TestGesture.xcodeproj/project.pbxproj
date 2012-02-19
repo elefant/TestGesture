@@ -22,14 +22,14 @@
 		C5E3941F14F0F87A00DCCB84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C5E3942114F0F87A00DCCB84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C5E3942314F0F87A00DCCB84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C5E3942714F0F87A00DCCB84 /* TestGesture-Info.plist */ = {isa = PBXFileReference; path = "TestGesture-Info.plist"; sourceTree = "<group>"; };
+		C5E3942714F0F87A00DCCB84 /* TestGesture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestGesture-Info.plist"; sourceTree = "<group>"; };
 		C5E3942914F0F87A00DCCB84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C5E3942B14F0F87A00DCCB84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C5E3942D14F0F87A00DCCB84 /* TestGesture-Prefix.pch */ = {isa = PBXFileReference; path = "TestGesture-Prefix.pch"; sourceTree = "<group>"; };
-		C5E3942E14F0F87A00DCCB84 /* TestGestureAppDelegate.h */ = {isa = PBXFileReference; path = TestGestureAppDelegate.h; sourceTree = "<group>"; };
+		C5E3942D14F0F87A00DCCB84 /* TestGesture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestGesture-Prefix.pch"; sourceTree = "<group>"; };
+		C5E3942E14F0F87A00DCCB84 /* TestGestureAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestGestureAppDelegate.h; sourceTree = "<group>"; };
 		C5E3942F14F0F87A00DCCB84 /* TestGestureAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGestureAppDelegate.m; sourceTree = "<group>"; };
 		C5E3943214F0F87A00DCCB84 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C5E3943414F0F87A00DCCB84 /* TestGestureViewController.h */ = {isa = PBXFileReference; path = TestGestureViewController.h; sourceTree = "<group>"; };
+		C5E3943414F0F87A00DCCB84 /* TestGestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestGestureViewController.h; sourceTree = "<group>"; };
 		C5E3943514F0F87A00DCCB84 /* TestGestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGestureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
