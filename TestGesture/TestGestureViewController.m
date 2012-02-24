@@ -7,54 +7,34 @@
 //
 
 #import "TestGestureViewController.h"
+#import "FaceView.h"
+
+@interface TestGestureViewController ()
+@property (nonatomic, weak) IBOutlet FaceView* faceView;
+@end
 
 @implementation TestGestureViewController
+@synthesize happiness = _happiness;
+@synthesize faceView = _faceView;
 
-- (void)didReceiveMemoryWarning
+
+- (void) setHappiness:(int)happiness
 {
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+    _happiness = happiness;
+    [self.faceView setNeedsDisplay];
+    
 }
 
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad
+-(void) setFaceView:(FaceView *)faceView
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"xxxxooxxxxx");
+    _faceView = faceView;
+    [self.faceView addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:self.faceView action:@selector(pinch:)]];
 }
 
-- (void)viewDidUnload
+-(BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    NSLog(@"oooooo");
+    return YES;
 }
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
 @end
