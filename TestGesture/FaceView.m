@@ -8,8 +8,43 @@
 
 #import "FaceView.h"
 
+#define OVERRIDE_TOUCH_EVENTS_HANDLING TRUE
+
+@interface FaceView()
+#if( OVERRIDE_TOUCH_EVENTS_HANDLING )
+    - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+    - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+    - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
+#endif
+@end
+
 @implementation FaceView
 @synthesize scale = _scale;
+
+#if( OVERRIDE_TOUCH_EVENTS_HANDLING )
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touches count: %d", touches.count);
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"Moving");
+    [super touchesMoved:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesEnded:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesCancelled:touches withEvent:event];
+}
+
+#endif
 
 -(CGFloat) scale
 {
@@ -44,6 +79,7 @@
 -(void) setup
 {
     self.contentMode = UIViewContentModeRedraw;
+    self.multipleTouchEnabled = YES;
 }
 
 -(void) awakeFromNib
