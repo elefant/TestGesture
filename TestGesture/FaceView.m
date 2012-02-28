@@ -70,9 +70,8 @@
     if( (gesture.state == UIGestureRecognizerStateChanged )|| (gesture.state == UIGestureRecognizerStateEnded) ) 
     {
         NSLog(@"gesture.scale %f", gesture.scale);
-        self.scale = gesture.scale;
-        // is this line really needed???????
-        //gesture.scale =1;
+        self.scale *= gesture.scale;
+        gesture.scale =1;
     }
 }
 
