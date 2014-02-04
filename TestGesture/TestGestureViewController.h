@@ -12,4 +12,6 @@
 
 @property (nonatomic) int happiness; // 0 is sad; 100 is very happy
 
+@property (nonatomic, strong) UIPanGestureRecognizer* panRecognizer;
+- (void) handlePan:(UIPanGestureRecognizer*) gesture;
 @end
